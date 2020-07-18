@@ -13,6 +13,33 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+//The post request has to be here since this is the router in which the form is and where we send the post request to
+router.post('/', function(req,res,next){
+  let name = req.body.name
+  let email = req.body.email
+  let services = req.body.services
+  let subject = req.body.subject
+
+
+  let params = [name, email, services, subject]
+  const sql = "INSERT INTO Messages(name, email, services, subject) VALUES ($1, $2, $3, $4);"
+
+  
+
+  pool.query(sql, params, function(err, dbRes){
+      if(err){
+          return res.json(err)
+      }
+      // //I set a timeout here so the user can see the ThankYouModal
+      // setTimeout(function(){res.redirect('/')},2500);
+
+     })
+});
 
 
 module.exports = router;
+
+
+
+// run code for every cahnge: --> ----->
+//git add . && git commit -m "api" && git push heroku master && heroku open && heroku logs --tail
