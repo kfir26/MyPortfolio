@@ -31,7 +31,7 @@ router.post('/', function(req,res,next){
           return res.json(err)
       }
       // //I set a timeout here so the user can see the ThankYouModal
-      // setTimeout(function(){res.redirect('/')},2500);
+       setTimeout(function(){res.redirect('/')},2500);
 
      })
 });

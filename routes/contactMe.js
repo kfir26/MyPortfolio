@@ -9,15 +9,15 @@ const { Pool } = require('pg');
 });
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res, next){
     res.send('Im here bro');
   });
 
 
 // HTTP Methodes: get ,post , update , delete
-router.get('/createTable', function(req, res, next) {
+router.get('/createTable', function(req, res, next){
     // 'CREATE TABLE IF NOT EXISTS Students (id SERIAL,firstName TEXT, lastName TEXT)'
-    const sql = 'CREATE TABLE Students(id SERIAL,name TEXT, email TEXT, services TEXT, subject TEXT)'
+    const sql = "CREATE TABLE Students(id SERIAL,name TEXT, email TEXT, services TEXT, subject TEXT)"
   
     pool.query(sql,[], function(err,dbRes){
       if(err){
@@ -25,21 +25,21 @@ router.get('/createTable', function(req, res, next) {
         return res.json(err)
         //return since we cant respond twice
       }
-      res.json({ message: 'Table is Online sir .'})
+      res.json({ message: "Table is Online sir ."})
       })
   });
   
   /* get all students */
-  router.get('/getMessages', function(req, res, next) {
-   const sql = 'SELECT * FROM Messages'
+  router.get('/getMessages', function(req, res, next){
+   const sql = "SELECT * FROM Messages"
   
-   pool.query(sql,[], (err,dbRes)=>{
+   pool.query(sql,[], function(err,dbRes){
      if(err){
        //responsed an object as json
        return res.json(err)
        //return since we cant respond twice
      }
-     res.json({ 'Messages': dbRes.rows })
+     res.json({ Messages: dbRes.rows })
     })
   });
 
@@ -50,14 +50,14 @@ router.get('/createTable', function(req, res, next) {
   let subject = req.body.subject
   */
   /* add new item */
-  router.post('/saveMessages', function(req, res, next) {
+  router.post('/saveMessages', function(req, res, next){
     let name = req.body.name
     let email = req.body.email
     let services = req.body.services
     let subject = req.body.subject
 
     let params = [name, email, services, subject]
-    const sql = `INSERT INTO Messages(name, email, services, subject) VALUES($1,$2,$3,$4)`
+    const sql = "INSERT INTO Messages(name, email, services, subject) VALUES($1,$2,$3,$4)"
 
   
    pool.query(sql,params,function(err,dbRes){
@@ -83,7 +83,7 @@ router.get('/createTable', function(req, res, next) {
 
     let params = [id]
 
-    const sql = `DELETE FROM Messages WHERE id = $1`
+    const sql = "DELETE FROM Messages WHERE id = $1"
     
     pool.query(sql,params, function(err,dbRes){
       if(err){
