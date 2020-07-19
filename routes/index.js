@@ -30,7 +30,8 @@ router.post('/', function(req,res,next){
           return res.json(err)
       }
 
-       res.json({ 'messgae': 'client added succesfully' })
+      //  res.json({ 'messgae': 'client added succesfully' })
+       setTimeout(function(){res.redirect('/')},3000);
      })
 });
 
