@@ -17,7 +17,7 @@ router.get('/', function(req, res, next){
 // HTTP Methodes: get ,post , update , delete
 router.get('/createTable', function(req, res, next){
     // 'CREATE TABLE IF NOT EXISTS Students (id SERIAL,firstName TEXT, lastName TEXT)'
-    const sql = "CREATE TABLE Students(id SERIAL,name TEXT, email TEXT, services TEXT, subject TEXT)"
+    const sql = 'CREATE TABLE Students(id SERIAL,name TEXT, email TEXT, services TEXT, subject TEXT)'
   
     pool.query(sql,[], function(err,dbRes){
       if(err){
@@ -43,13 +43,6 @@ router.get('/createTable', function(req, res, next){
     })
   });
 
-    /*
-    let name = req.body.name
-  let email = req.body.email
-  let services = req.body.services
-  let subject = req.body.subject
-  */
-  /* add new item */
   router.post('/saveMessages', function(req, res, next){
     let name = req.body.name
     let email = req.body.email
