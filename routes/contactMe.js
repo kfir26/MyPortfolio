@@ -31,7 +31,7 @@ router.get('/createTable', function(req, res, next){
   
   /* get all students */
   router.get('/getMessages', function(req, res, next){
-   const sql = "SELECT * FROM Messages"
+   const sql = 'SELECT * FROM Messages'
   
    pool.query(sql,[], function(err,dbRes){
      if(err){
@@ -50,7 +50,7 @@ router.get('/createTable', function(req, res, next){
     let subject = req.body.subject
 
     let params = [name, email, services, subject]
-    const sql = "INSERT INTO Messages(name, email, services, subject) VALUES($1,$2,$3,$4)"
+    const sql = `INSERT INTO Messages(name, email, services, subject) VALUES($1,$2,$3,$4)`
 
   
    pool.query(sql,params,function(err,dbRes){
@@ -74,10 +74,10 @@ router.get('/createTable', function(req, res, next){
       return res.json({'error':'no id'})
     }
 
+    const sql = `DELETE FROM Messages WHERE id = $1`
+
     let params = [id]
 
-    const sql = "DELETE FROM Messages WHERE id = $1"
-    
     pool.query(sql,params, function(err,dbRes){
       if(err){
         //responsed an object as json
