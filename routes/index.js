@@ -22,17 +22,15 @@ router.post('/', function(req,res,next){
   let subject = req.body.subject
 
 
-  let params = [name, email, services, subject]
   const sql = 'INSERT INTO Messages(name, email, services, subject) VALUES ($1, $2, $3, $4);'
-
-  
+  let params = [name, email, services, subject]
 
   pool.query(sql, params, function(err, dbRes){
       if(err){
           return res.json(err)
       }
-      // //I set a timeout here so the user can see the ThankYouModal
-       setTimeout(function(){res.redirect('/')},2500);
+
+       res.json({ 'messgae': 'student added succesfully' })
 
      })
 });
@@ -43,4 +41,4 @@ module.exports = router;
 
 
 // run code for every cahnge: --> ----->
-//git add . && git commit -m "api" && git push heroku master && heroku open && heroku logs --tail
+// git add . && git commit -m "api" && git push heroku master && heroku open && heroku logs --tail

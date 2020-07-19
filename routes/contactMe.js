@@ -39,7 +39,7 @@ router.get('/createTable', function(req, res, next){
        return res.json(err)
        //return since we cant respond twice
      }
-     res.json({ Messages: dbRes.rows })
+     res.json({ 'getMessages': dbRes.rows })
     })
   });
 
@@ -58,12 +58,7 @@ router.get('/createTable', function(req, res, next){
        //responsed an object as json
        return res.json(err)
      } 
-     return res.json({
-        messageFromServer: "Message added",
-        name: name,
-        services: services,
-        subject: subject
-      })
+     res.json({ 'messgae': 'student added succesfully' })
     })
 });
 
@@ -79,19 +74,13 @@ router.get('/createTable', function(req, res, next){
     let params = [id]
 
     pool.query(sql,params, function(err,dbRes){
-      if(err){
-        //responsed an object as json
-        return res.json({
-        Error:err,
-        messageFromServer: "Cant do It Chiff"
-        //return since we cant respond twice
-      })
-    }
-      return res.json({
-          messageFromServer: `Message: ${id} deleted`
-      })
+        if(err){
+            //responsed an object as json
+            return res.json(err)
+            //return since we cant respond twice
+          }
+          res.json({ 'messgae': 'student deleted succesfully' })
+        })
     })
-  });
-  
 
   module.exports = router;
