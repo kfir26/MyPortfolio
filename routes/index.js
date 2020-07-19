@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+
 const { Pool } = require('pg');
 	const pool = new Pool({
  	connectionString: process.env.DATABASE_URL,
@@ -22,7 +23,7 @@ router.post('/', function(req,res,next){
 
 
   let params = [name, email, services, subject]
-  const sql = "INSERT INTO Messages(name, email, services, subject) VALUES ($1, $2, $3, $4);"
+  const sql = 'INSERT INTO Messages(name, email, services, subject) VALUES ($1, $2, $3, $4);'
 
   
 
