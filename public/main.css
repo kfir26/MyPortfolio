@@ -695,6 +695,7 @@ input[type="submit"]:hover{
 /*Start Thanks lol*/
 
 .modal {
+    display: none; 
     position: absolute;
     top: 50%;
     left: 50%;
