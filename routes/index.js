@@ -30,7 +30,7 @@ router.post('/', function(req,res,next){
           return res.json(err)
       }
 
-       res.json({ 'messgae': 'student added succesfully' })
+       res.json({ 'messgae': 'client added succesfully' })
      })
 });
 

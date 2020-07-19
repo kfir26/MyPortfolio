@@ -29,7 +29,7 @@ router.get('/createTable', function(req, res, next){
       })
   });
   
-  /* get all students */
+  /* get all messages */
   router.get('/getMessages', function(req, res, next){
    const sql = 'SELECT * FROM Messages'
   
@@ -50,7 +50,7 @@ router.get('/createTable', function(req, res, next){
     let subject = req.body.subject
 
     let params = [name, email, services, subject]
-    const sql = `INSERT INTO Messages(name, email, services, subject) VALUES($1, $2, $3, $4)`
+    const sql = "INSERT INTO Messages(name, email, services, subject) VALUES($1, $2, $3, $4);"
 
   
    pool.query(sql,params,function(err,dbRes){
@@ -58,7 +58,7 @@ router.get('/createTable', function(req, res, next){
        //responsed an object as json
        return res.json(err)
      } 
-     res.json({ 'messgae': 'student added succesfully' })
+     res.json({ 'Messages': 'client added succesfully' })
     })
 });
 
@@ -79,7 +79,7 @@ router.get('/createTable', function(req, res, next){
             return res.json(err)
             //return since we cant respond twice
           }
-          res.json({ 'messgae': 'message deleted succesfully' })
+          res.json({ 'Messages': 'message deleted succesfully' })
         })
     })
 
