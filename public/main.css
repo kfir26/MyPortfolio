@@ -708,29 +708,25 @@ input[type="submit"]:hover{
 }
 
 .text {
-    background-color: #3e4e62;
+    background-color: #35245C;
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 240px; 
+    width: 100%; 
 }
   
 .text h2 {
     margin: 15% auto;
     color: #fff;
+    font-size:3rem;
     font-family: 'The Historia Demo',sans-serif;
 }
 .text span {
     display: inline;
 }
 
-span:hover {
-    color: #48CFAD;
-    transition: all .5s;
-}
-
 span.name {
-    background: linear-gradient(to top,#DEA082,#22154B);
+    color:#DEA082;
 }
 span.m-left {
     margin: 15% auto;;
