@@ -716,8 +716,8 @@ input[type="submit"]:hover{
 }
   
 .text h2 {
+    margin: 15% auto;
     color: #fff;
-    font-size: 8rem;
     font-family: 'The Historia Demo',sans-serif;
 }
 .text span {
@@ -733,7 +733,7 @@ span.name {
     background: linear-gradient(to top,#DEA082,#22154B);
 }
 span.m-left {
-    margin-left: -10px;
+    margin: 15% auto;;
 }
 
  /*End Thanks lol*/
