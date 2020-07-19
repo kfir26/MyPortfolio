@@ -708,13 +708,16 @@ input[type="submit"]:hover{
 }
 
 .text {
-    margin-top: 120px;
-    font-size: 3rem;
+    background-color: #3e4e62;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 240px; 
 }
   
 .text h2 {
     color: #fff;
-    font-size: 20rem;
+    font-size: 8rem;
     font-family: 'The Historia Demo',sans-serif;
 }
 .text span {
