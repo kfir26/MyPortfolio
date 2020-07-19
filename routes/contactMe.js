@@ -17,7 +17,7 @@ router.get('/', function(req, res, next){
 // HTTP Methodes: get ,post , update , delete
 router.get('/createTable', function(req, res, next){
     // 'CREATE TABLE IF NOT EXISTS Students (id SERIAL,firstName TEXT, lastName TEXT)'
-    const sql = 'CREATE TABLE Students(id SERIAL,name TEXT, email TEXT, services TEXT, subject TEXT)'
+    const sql = 'CREATE TABLE Messages(id SERIAL, name TEXT, email TEXT, services TEXT, subject TEXT)'
   
     pool.query(sql,[], function(err,dbRes){
       if(err){
@@ -50,7 +50,7 @@ router.get('/createTable', function(req, res, next){
     let subject = req.body.subject
 
     let params = [name, email, services, subject]
-    const sql = `INSERT INTO Messages(name, email, services, subject) VALUES($1,$2,$3,$4)`
+    const sql = `INSERT INTO Messages(name, email, services, subject) VALUES($1, $2, $3, $4)`
 
   
    pool.query(sql,params,function(err,dbRes){
@@ -79,7 +79,7 @@ router.get('/createTable', function(req, res, next){
             return res.json(err)
             //return since we cant respond twice
           }
-          res.json({ 'messgae': 'student deleted succesfully' })
+          res.json({ 'messgae': 'message deleted succesfully' })
         })
     })
 

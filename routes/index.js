@@ -31,7 +31,6 @@ router.post('/', function(req,res,next){
       }
 
        res.json({ 'messgae': 'student added succesfully' })
-
      })
 });
 
