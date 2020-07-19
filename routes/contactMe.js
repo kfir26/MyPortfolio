@@ -39,7 +39,7 @@ router.get('/createTable', function(req, res, next){
        return res.json(err)
        //return since we cant respond twice
      }
-     res.json({ 'getMessages': dbRes.rows })
+     res.json({ 'Messages': dbRes.rows })
     })
   });
 
