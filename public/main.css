@@ -234,7 +234,11 @@ li{
 }
 /*Start about*/
 /* my added!!!!!!!! */
+/*  run code for every cahnge: --> ----->
+git add . && git commit -m "api" && git push heroku master && heroku open && heroku logs --tail
+  */
 .about{
+    right: 20px;
     width: 100%;
     height: 130vh;
     background: url('video/SCR2.mp4');
