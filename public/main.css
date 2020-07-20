@@ -15,8 +15,8 @@ body{
 
     width: 100%;
     height: 100%;
+    background: content-box url("images/sitebg.jpg");
     /* background: url("images/sitebg.jpg") no-repeat center fixed; */
-    background: center / contain no-repeat url("images/sitebg.jpg");
     background-size: cover;
 }
 
