@@ -233,7 +233,7 @@ li{
     z-index: 2;
 }
 /*Start about*/
-/* my added!!!!!!!! */
+
 /*  run code for every cahnge: --> ----->
 git add . && git commit -m "api" && git push heroku master && heroku open && heroku logs --tail
   */
@@ -284,7 +284,7 @@ git add . && git commit -m "api" && git push heroku master && heroku open && her
 /* Start:
     My links too...
      facebook
-     twitter
+     Linkedin
      github     */
 .social-media i{
     font-size: 8rem;
@@ -295,8 +295,8 @@ git add . && git commit -m "api" && git push heroku master && heroku open && her
     color: #4267b2;
 }
 
-.fa-twitter-square:hover{
-    color: #38a1f3;
+.fa-linkedin:hover{
+    color:blueviolet;
 }
 
 .fa-github-square:hover{
@@ -305,7 +305,7 @@ git add . && git commit -m "api" && git push heroku master && heroku open && her
 /*End
     My links too...
      facebook
-     twitter
+     Linkedin
      github     */
 
 /*End about*/
