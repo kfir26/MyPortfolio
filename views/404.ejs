@@ -28,7 +28,8 @@
       <div class="title">404</div>
       <div class="subtitle">Hmmm...</div>
       <div class="decription">It looks one of the developers fell asleep</div>
-      <button type="button" class="button button--active" action="https://myportfolio-by-kpaniri.herokuapp.com">Plag me Back Home</button>
+      <!-- <button class="button button--active">Plag me Back Home</button> -->
+      <button><a id="backBtn" class="button button--active"></a></button>
     </div>
     
     <div class="astronaut">
@@ -67,5 +68,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="/404.js"></script>
+    <script type="text/javascript">
+    document.getElementById('backBtn').addEventListener('click',goBack);
+    function goBack(){
+      window.location.href="javascript:history.go(-1)"
+    }
+    </script>
 </body>
 </html>
