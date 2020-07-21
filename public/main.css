@@ -296,7 +296,7 @@ git add . && git commit -m "api" && git push heroku master && heroku open && her
 }
 
 .fa-linkedin:hover{
-    color:blueviolet;
+    color: palegreen;
 }
 
 .fa-github-square:hover{
