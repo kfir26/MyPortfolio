@@ -436,11 +436,11 @@ git add . && git commit -m "api" && git push heroku master && heroku open && her
 }
 
 .timeline h1{
-    font-size: 8rem;
+    font-size: 3rem;
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 1rem;
-    opacity: .3;
+    opacity: .5;
 }
 
 .timeline .date{
