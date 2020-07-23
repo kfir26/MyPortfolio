@@ -24,7 +24,6 @@ $(document).ready(function () {
       
       const cordCanvas = document.getElementById('cord');
       const ctx = cordCanvas.getContext('2d');
-      
       let y1 = 160;
       let y2 = 100;
       let y3 = 100;
@@ -44,7 +43,7 @@ $(document).ready(function () {
         ctx.strokeStyle = 'white';
         ctx.lineWidth = 8;
         ctx.stroke();
-        
+        const h = $('body').height()
         if (y1 === 100) {
           y1Forward = true;
         }
