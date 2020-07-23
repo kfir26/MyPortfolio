@@ -224,12 +224,13 @@ li{
     font-size: 2rem;
     font-weight: 300;
 }
+
 /*End header*/
 .firstImg{
     width: 100%;
     height: 110vh;
     background: url(images/ItsStart.png);
-    background-size: contain;
+    background-size: cover;
     z-index: 2;
 }
 /*Start about*/
