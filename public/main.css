@@ -380,8 +380,8 @@ git add . && git commit -m "api" && git push heroku master && heroku open && her
 }
 
 .portfolio-img{
-    width: 5rem; 
-    /* was 50 rem */
+    width: 50rem; 
+    height: 10vh;
     flex: 1;
 }
 
